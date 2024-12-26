@@ -35,6 +35,9 @@
         button:hover {
             background-color: #005f8a;
         }
+        .no-facts {
+            color: red; /* Set the text color to red for the no facts message */
+        }
     </style>
 </head>
 <body>
@@ -64,6 +67,7 @@
                 currentFactIndex++;
             } else {
                 document.getElementById('fact-display').textContent = "Sorry, no more facts for today.";
+                document.getElementById('fact-display').classList.add('no-facts');
             }
         });
     </script>
