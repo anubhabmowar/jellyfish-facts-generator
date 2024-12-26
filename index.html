@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jellyfish Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #0077be;
+        }
+        #fact-display {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.2em;
+        }
+        button {
+            display: block;
+            margin: 0 auto;
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #0077be;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #005f8a;
+        }
+    </style>
+</head>
+<body>
+    <h1>Interesting Facts About Jellyfish</h1>
+    <div id="fact-display">Press the button to generate a fact!</div>
+    <button id="generate-fact-button">Generate Fact</button>
+
+    <script>
+        const jellyfishFacts = [
+            "Jellyfish have been around for over 500 million years, making them one of the oldest living creatures on Earth.",
+            "They are composed of about 95% water.",
+            "Jellyfish do not have a brain, heart, or bones.",
+            "They can be found in every ocean, from the surface to the deep sea.",
+            "Some species of jellyfish are bioluminescent, meaning they can produce their own light.",
+            "Jellyfish can reproduce both sexually and asexually.",
+            "The largest jellyfish species is the lion's mane jellyfish, which can have tentacles that reach over 100 feet long.",
+            "Some jellyfish can deliver a painful sting, while others are harmless to humans.",
+            "Jellyfish play a crucial role in marine ecosystems, serving as both predators and prey.",
+            "They have a unique method of propulsion, contracting and relaxing their bell to move through the water."
+        ];
+
+        let currentFactIndex = 0;
+
+        document.getElementById('generate-fact-button').addEventListener('click', function() {
+            if (currentFactIndex < jellyfishFacts.length) {
+                document.getElementById('fact-display').textContent = jellyfishFacts[currentFactIndex];
+                currentFactIndex++;
+            } else {
+                document.getElementById('fact-display').textContent = "Sorry, no more facts for today.";
+            }
+        });
+    </script>
+</body>
+</html>
